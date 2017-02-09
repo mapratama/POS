@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="@dimen/login_margin"
+    android:gravity="center"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:layout_marginBottom="50dp"
+            android:layout_gravity="center"/>
+
+        <Button android:id="@+id/btnSinkronHO"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_alignParentBottom="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/login_textsize"
+            android:text="Sinkron HO"
+            android:textAllCaps="true"/>
+        <Button android:id="@+id/btnOrder"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_alignParentBottom="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/login_textsize"
+            android:text="Order"
+            android:textAllCaps="true"
+            android:layout_marginTop="8dp"/>
+        <Button android:id="@+id/btnListOrder"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_alignParentBottom="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/login_textsize"
+            android:text="List Order"
+            android:textAllCaps="true"
+            android:layout_marginTop="8dp"/>
+        <Button android:id="@+id/btnKirimHO"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_alignParentBottom="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/login_textsize"
+            android:text="Kirim HO"
+            android:textAllCaps="true"
+            android:layout_marginTop="8dp"/>
+        <Button android:id="@+id/btnLogOut"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/login_textsize"
+            android:text="Log out"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+</ScrollView>

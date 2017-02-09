@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ToolBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <RelativeLayout android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/login_margin">
+        <LinearLayout android:id="@+id/linHeader"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:weightSum="2">
+            <LinearLayout android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:layout_marginRight="8dp">
+                <TextView android:id="@+id/lblDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/login_textsize"
+                    android:text="01/01/2016"/>
+                <EditText android:id="@+id/txtItemName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/login_textsize"
+                    android:background="@drawable/custom_box_border_black"
+                    android:padding="10dp"
+                    android:maxLines="1"
+                    android:layout_marginTop="6dp"
+                    android:editable="false"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:layout_marginLeft="8dp">
+                <TextView android:id="@+id/lblLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/login_textsize"
+                    android:text="CENTRAL PARK"
+                    android:textAllCaps="true"/>
+                <ImageView android:id="@+id/imgBarcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/custom_box_border_black"
+                    android:src="@drawable/barcode"
+                    android:scaleType="centerCrop"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View android:id="@+id/viewHeader"
+            android:layout_below="@+id/linHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="@dimen/login_margin"/>
+        <ListView android:id="@+id/rcList"
+            android:layout_below="@+id/viewHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="110dp"/>
+
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_alignParentBottom="true">
+            <TextView android:id="@+id/lblTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/login_textsize"
+                android:text="TOTAL"
+                android:gravity="right"/>
+            <View android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="8dp"/>
+            <LinearLayout android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+                <TextView android:id="@+id/lblOrderName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/login_textsize"
+                    android:textAllCaps="true"/>
+                <TextView android:id="@+id/txtTotal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/login_textsize"
+                    android:textAllCaps="true"
+                    android:gravity="right"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:layout_marginTop="10dp">
+                <Button android:id="@+id/btnHapus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/login_textsize"
+                    android:textColor="@android:color/black"
+                    android:background="@android:color/darker_gray"
+                    android:text="HAPUS"
+                    android:layout_marginRight="3dp"/>
+                <Button android:id="@+id/btnSimpan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/login_textsize"
+                    android:textColor="@android:color/black"
+                    android:background="@android:color/darker_gray"
+                    android:text="SIMPAN"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginLeft="3dp"/>
+                <Button android:id="@+id/btnProses"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/login_textsize"
+                    android:textColor="@android:color/white"
+                    android:background="@color/colorPrimary"
+                    android:text="PROSES"
+                    android:layout_marginLeft="3dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
